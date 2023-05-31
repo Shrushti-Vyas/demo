@@ -5,7 +5,7 @@
  * @format
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   Text,
@@ -17,7 +17,6 @@ import Footer from './src/components/Footer';
 import Header from './src/components/Header';
 
 function App(): JSX.Element {
-  const[isHide,setIsHide] = useState(false);
 
   const list = [{
     title: 'Stranger Things 1',
@@ -41,11 +40,13 @@ function App(): JSX.Element {
         renderItem={({ item }) => (
           <>
             <View style={styles.textContainer}>
-              <Image
+             <View style={styles.imageContainer}>
+             <Image
                 source={require('./src/assests/image1.png')}
                 style={styles.image}
                 resizeMode={'contain'}
               />
+             </View>
               <View>
                 <Text>{item.title}</Text>
                 <Text>{item.duration}</Text>
@@ -56,7 +57,6 @@ function App(): JSX.Element {
                 resizeMode={'contain'}
               />
             </View>
-            <View style={styles.spacer} />
           </>
         )
         }
@@ -68,7 +68,7 @@ function App(): JSX.Element {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
   textContainer: {
     flexDirection: 'row',
@@ -77,12 +77,15 @@ const styles = StyleSheet.create({
     marginVertical: 20,
     marginHorizontal: 5,
   },
+  imageContainer: {  
+    borderColor: 'black', 
+    borderWidth: 1, 
+    padding: 5,
+  },
   image: {
     height: 100,
     width: 150,
     marginTop: 5,
-    borderColor: 'black',
-    borderWidth: 1,
   },
   dot: {
     height: 25,

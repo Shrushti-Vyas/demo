@@ -19,6 +19,7 @@ const Footer = () => {
     return (
         <View style={styles.container}>
             <View>
+                <View style={styles.spacer} />
                 <Text style={styles.title}>You May Also Like</Text>
                 <View style={styles.spacer} />
             </View>
@@ -54,20 +55,20 @@ const styles = StyleSheet.create({
         fontWeight: 'bold', 
     },
     spacer: { 
-        marginTop: 15, 
+        marginTop: 10, 
         borderWidth: 1, 
         borderColor: 'gray', 
         width: '100%', 
     },
     imageContainer: { 
-        paddingHorizontal: 35, 
+        paddingHorizontal: 10, 
         paddingVertical: 10, 
     },
     image: { 
-        height: 100, 
-        width: 150, 
+        height: 102,
         marginTop: 5, 
         borderColor: 'black', 
-        borderWidth: 1 
+        borderWidth: 1 ,
+        aspectRatio: 16/9,
     },
 });

@@ -36,21 +36,22 @@ export default Header;
 
 const styles = StyleSheet.create({
   container: { 
-    flex: 1, 
+    flex: 1,
+    alignSelf: 'center', 
   },
   subContainer: { 
     height: 300, 
-    width: 400, 
+    width: 380, 
     borderColor: 'black', 
     borderWidth: 1, 
     borderRadius: 10, 
     marginTop: 80, 
-    marginLeft: 6, 
     marginBottom: 160,
   },
   image: { 
     height: 300, 
-    width: 400, 
+    width: 360,
+    alignSelf: 'center', 
   },
   mainTitle: { 
     marginTop: 20, 
